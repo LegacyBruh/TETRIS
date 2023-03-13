@@ -48,25 +48,26 @@ def main(display):
                 if event.key == pygame.K_LEFT:
                     current_block.x -= 1
                     if not valid_space(current_block, gamefield) == True:    
-                        current_block.x += 1   
+                        current_block.x += 1  
+                    test1(current_block)
                                                                                 
                 if event.key == pygame.K_RIGHT:
                     current_block.x += 1
                     if not valid_space(current_block, gamefield) == True:
                         current_block.x -= 1
+                    test1(current_block)
                               
                 if event.key == pygame.K_UP:
                     current_block.rotation = current_block.rotation + 1
                     if not valid_space(current_block, gamefield) == True:
                         current_block.rotation = current_block.rotation - 1
+                    test4(current_block)
 
                 if event.key == pygame.K_DOWN:
                     current_block.y += 1
                     if not valid_space(current_block, gamefield) == True:
                         current_block.y -= 1
-                test1(current_block)
-                test2(current_block)
-                test4(current_block)
+                    test2(current_block)
 
         rotated_block = rotate_block(current_block)
 
@@ -84,7 +85,7 @@ def main(display):
             change_block = False
             remove_block = remove_lines(gamefield, filled_position)
             remove_block
-            test3(remove)
+            test3(remove_block)
         
         create_window(display)
         display_next_shape(next_block, display)
