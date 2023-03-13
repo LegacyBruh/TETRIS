@@ -51,5 +51,6 @@ def remove_lines(gamefield, filled_position):
             if y < index:
                 new_key = (x, y + removed)
                 filled_position[new_key] = filled_position.pop(key)
+    return removed
     
 
