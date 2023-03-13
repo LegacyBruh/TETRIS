@@ -2,6 +2,7 @@ import pygame
 from shapes import *
 from gamewindow import *
 from gamefunctions import *
+from tests import *
 
 width = 550
 height = 690
@@ -63,7 +64,9 @@ def main(display):
                     current_block.y += 1
                     if not valid_space(current_block, gamefield) == True:
                         current_block.y -= 1
-                    
+                test1(current_block)
+                test2(current_block)
+                test4(current_block)
 
         rotated_block = rotate_block(current_block)
 
@@ -81,7 +84,7 @@ def main(display):
             change_block = False
             remove_block = remove_lines(gamefield, filled_position)
             remove_block
-           
+            test3(remove)
         
         create_window(display)
         display_next_shape(next_block, display)
